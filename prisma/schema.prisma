@@ -61,9 +61,9 @@ model creditEntreprise {
   prenomClient String
   motif String
   montant Int
-  montant_paye Int
-  montant_restant Int
-  solde Int
+  montant_paye Int?
+  montant_restant Int?
+  solde Int?
 }
 
 model prepayee {
@@ -71,8 +71,8 @@ model prepayee {
   date DateTime
   nom_client String
   montant_initial Int
-  montant_depense Int
-  montant_restant Int
+  montant_depense Int?
+  montant_restant Int? 
 }
 
 model serviceEntreprise {
@@ -80,8 +80,8 @@ model serviceEntreprise {
   date DateTime
   mom_service nomService @default(ORANGE_MONEY) // Exemple de valeur par défaut
   solde_a_nouveau Int
-  montant_final Int
-  total Int
+  montant_final Int?
+  total Int?
 }
 
 model transInternation {
@@ -91,12 +91,12 @@ model transInternation {
   montant_trans Int
   montant_recus Int
   date_debut DateTime
-  date_fin DateTime
-  soldes Int
-  Decouvert Int
-  crediut Int
-  debit_caisse Int
-  debit_BNDA Int
+  date_fin DateTime?
+  soldes Int?
+  Decouvert Int?
+  crediut Int?
+  debit_caisse Int?
+  debit_BNDA Int?
 }
 
 model uvAbonnement {
@@ -111,9 +111,9 @@ model caisse {
   date DateTime
   service nomService
   stock_initial Int
-  stock_final Int
-  montant_total Int
-  solde Int
+  stock_final Int?
+  montant_total Int?
+  solde Int?
 }
 
 model Profile {

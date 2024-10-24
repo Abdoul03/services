@@ -7,7 +7,7 @@ const {
   updateCreEnt,
   deleteCreEnt,
   createCreEnt
-} = require('../controllers/creditEntrControl')
+} = require('../controllers/creditEntrControllers')
 
 //Route pour recupéré tous les commission
 router.get('/', getCreEnt);

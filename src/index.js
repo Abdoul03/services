@@ -4,6 +4,7 @@ const app = express();
 const clientCanalRoutes = require('./routes/clientCanal.Routes')
 const commissionRoutes = require('./routes/commission.Routes')
 const creditEntrepriseRoutes = require('./routes/creditEntreprise.Routes')
+const prepayee = require('./routes/prepayee.Routes')
 
 const cors = require('cors')
 
@@ -15,9 +16,10 @@ app.use(cors());
 
 
 //les routes
-app.use('/canalClient', clientCanalRoutes);
-app.use('/commission', commissionRoutes);
+app.use('/canalClient', clientCanalRoutes)
+app.use('/commission', commissionRoutes)
 app.use('/creditEnt', creditEntrepriseRoutes)
+app.use('/prepayee', prepayee)
 
 
 
