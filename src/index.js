@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
-const clientCanalRoutes = require('./routes/clientCanalRoutes')
-const dotenv = require("dotenv").config();
+
+const clientCanalRoutes = require('./routes/clientCanal.Routes')
+const commissionRoutes = require('./routes/commission.Routes')
+const creditEntrepriseRoutes = require('./routes/creditEntreprise.Routes')
+
 const cors = require('cors')
 
 // Middleware pour parser le JSON
@@ -11,8 +14,10 @@ app.use(cors());
 
 
 
-// Utiliser les routes pour les utilisateurs
+//les routes
 app.use('/canalClient', clientCanalRoutes);
+app.use('/commission', commissionRoutes);
+app.use('/creditEnt', creditEntrepriseRoutes)
 
 
 

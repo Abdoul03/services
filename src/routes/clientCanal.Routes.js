@@ -11,7 +11,7 @@ const {
 
 
 // Route pour récupérer tous les clients canal+
-router.get('/clientCanals', getClientCanal);
+router.get('/', getClientCanal);
 //Route pour récupérer un client canal+
 router.get('/clientCanal/:id', getClientCanalById);
 //Route pour mettre a jour un client canal+
