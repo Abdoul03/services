@@ -94,7 +94,7 @@ model transInternation {
   date_fin DateTime?
   soldes Int?
   Decouvert Int?
-  crediut Int?
+  credit Int?
   debit_caisse Int?
   debit_BNDA Int?
 }
